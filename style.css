@@ -1,0 +1,717 @@
+/*=============== google fonts ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*=============== css variables ===============*/
+:root {
+  --header-height: 3.5rem;
+  --font-size-base: 1rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-color: hsl(33, 100%, 50%);
+  --secondary-color: hsl(39, 100%, 50%);
+  --button-color: hsl(33, 100%, 50%);
+  --button-color-alt: hsl(240, 100%, 25%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 99%);
+  --hero-color: hsl(0, 0%, 94%);
+  --card-color: hsl(0, 0%, 94%);
+  --container-color: hsl(0, 0%, 100%);
+  --border-color: hsl(0, 0%, 94%);
+  --black-color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Jost", sans-serif;
+
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* Responsive typography */
+  @media screen and (min-width: 968px) {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi: 600;
+  --font-bold: 700;
+
+  /*========== Margins Bottom ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== css reset ===============*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+button,
+input {
+  font-size: 1rem;
+}
+
+/* Set core body defaults */
+body {
+  font-family: var(--body-font);
+  font-size: var(--font-size-base);
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  transition: 0.4s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* An element that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*=============== css reset ends ===============*/
+
+/*=============== shared css ===============*/
+
+.container {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-start {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.place-items {
+  place-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section__description {
+  font-size: var(--h2-font-size);
+}
+
+.section__link {
+  color: var(--primary-color);
+}
+
+.section__icons {
+  display: flex;
+  align-self: center;
+}
+
+.section__icons .section__icon:last-child {
+  color: var(--primary-color);
+}
+
+.card {
+  padding: 0;
+  border: 2px solid var(--card-color);
+  box-shadow: 0 0 0 var(--black-color);
+}
+
+.card__img {
+  display: grid;
+  place-items: center;
+  height: 200px;
+  background-color: var(--card-color);
+}
+
+.card__img img {
+  width: 230px;
+  object-fit: cover;
+}
+
+/*=============== shared css ends ===============*/
+
+/*=============== header ===============*/
+.header {
+  height: var(--header-height);
+}
+
+.nav__toggle {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav__logo {
+  font-size: var(--h2-font-size);
+}
+
+.nav__logo span {
+  color: var(--primary-color);
+  font-size: var(--h1-font-size);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav__menu {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.nav__link {
+  color: var(--black-color);
+}
+
+.nav__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav__icons--desktop {
+  display: none;
+}
+
+.nav__icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav__icon-link {
+  color: var(--black-color);
+}
+
+.active-link {
+  color: var(--secondary-color);
+}
+
+/* Responsive header  */
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    display: flex;
+  }
+
+  .nav__icons--desktop {
+    display: block;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__close {
+    display: none;
+  }
+}
+/*=============== header ends ===============*/
+
+/*=============== hero start ===============*/
+.hero {
+  padding: 5px;
+}
+
+.hero__container {
+  place-items: center;
+}
+
+.hero__img-bg {
+  background-color: var(--hero-color);
+  width: 258px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero__img-bg--full {
+  box-shadow: 0 0 0 100vmax var(--hero-color);
+  clip-path: inset(0 -100vmax);
+}
+
+.hero__content {
+  display: grid;
+  place-items: center;
+  gap: 5px;
+  padding: 20px;
+}
+
+.hero__title {
+  font-size: var(--h1-font-size);
+}
+
+.hero__subtitle {
+  color: var(--primary-color);
+  font-size: var(--h3-font-size);
+}
+
+.hero__description {
+  font-size: var(--normal-font-size);
+}
+
+.hero__timer {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hero__time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: var(--small-font-size);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.hero__time--primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.hero__button {
+  display: inline-flex;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Responsive hero section */
+@media screen and (min-width: 768px) {
+  .hero--full {
+    box-shadow: 0 0 0 100vmax var(--hero-color);
+    clip-path: inset(0 -100vmax);
+  }
+
+  .hero {
+    background-color: var(--hero-color);
+  }
+}
+
+/*=============== hero ends ===============*/
+
+/*=============== collection start ===============*/
+
+.collection {
+  padding: 0;
+}
+
+.collection__card {
+  height: 300px;
+}
+
+.collection__card-content {
+  background-color: var(--white-color);
+  height: 80px;
+  align-self: flex-end;
+  padding: 10px;
+}
+.collection__card-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 5px;
+}
+.collection__card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collection__card-ratings {
+  display: flex;
+  column-gap: 20px;
+}
+
+.card-star {
+  font-size: 18px;
+}
+
+.card-star-fill {
+  color: var(--primary-color);
+}
+
+.collection__card-price {
+  color: var(--primary-color);
+}
+
+/*=============== collection ends ===============*/
+
+/*=============== category start ===============*/
+.category__title {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex-direction: row;
+  width: 100%;
+  margin-block-end: 20px;
+}
+
+.category__title::before {
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 0;
+  border-bottom: 4px solid var(--border-color);
+}
+
+.category__title::after {
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 0;
+  border-bottom: 4px solid var(--border-color);
+}
+
+.category__text {
+  text-align: center;
+  flex-grow: 0.2;
+  flex-shrink: 0;
+}
+
+.category__content {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.category__card .card__img {
+  border-radius: 10px;
+
+}
+
+.category__card .card__img img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.category__card .card__content {
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.category__card .card__content h3 {
+  font-weight: 900;
+}
+
+ /*=============== category ends ===============*/
+
+/*=============== offer  start ===============*/
+
+.card__title {
+  font-size: var(--h2-font-size);
+}
+
+.card__ratings {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.card__pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.card__amount {
+  color: var(--primary-color);
+}
+
+.card__discount {
+  text-decoration: line-through;
+}
+
+.offers__content {
+  gap: 10px;
+}
+
+.card__offer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.offer__card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.offer__card .card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+/*===============  offer ends ===============*/
+
+/*=============== arrival start ===============*/
+.arrival__container {
+  gap: 10px;
+}
+
+.arrival__content {
+  gap: 10px;
+}
+
+.featured__card {
+  display: grid;
+  background-color: var(--card-color);
+}
+
+.featured__card .card__img {
+  height: 300px;
+  justify-self: flex-end;
+}
+
+.featured__card .card__content {
+  display: grid;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.featured__card .card__title {
+  color: var(--button-color-alt);
+  font-size: var(--h2-font-size);
+}
+
+.featured__card .card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-start;
+  background-color: var(--button-color-alt);
+  color: var(--white-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/*=============== arrival ends ===============*/
+
+/*=============== blog start ===============*/
+.blog-img {
+  height: 100px;
+  width: 100px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/*=============== blog ends ===============*/
+/*Responsive designs*/
+
+/*mobile devices*/
+@media screen and (min-width: 320px) {
+}
+
+/*medium screens*/
+@media screen and (min-width: 640px) {
+  .collection__content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/*tablets screens*/
+@media screen and (min-width: 768px) {
+  .hero__title{
+    font-size: 70px;
+  }
+}
+  
+/*desktop screens*/
+@media screen and (min-width: 1024px) {
+  .collection__content{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .category__content{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*large screens*/
+@media screen and (min-width: 1280px) {
+}
+
+/*extra large screens*/
+@media screen and (min-width: 1536px) {
+}

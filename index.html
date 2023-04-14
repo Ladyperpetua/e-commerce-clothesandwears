@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Avpto - Ecommerce</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+
+        <a class="nav__logo">
+          <h2 class="">Avpto<span>.</span></h2>
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list" id="nav-list">
+            <li class="nav__item">
+              <a class="nav__link active-link" href="#">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Category</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Shop</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Exciting Offers</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Track Order</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+        </div>
+
+        <div class="nav__icons">
+          <div class="nav__icons--desktop">
+            <a class="nav__icon-link" href="#"
+              ><i class="bx bx-search-alt-2 nav__icon"></i
+            ></a>
+            <a class="nav__icon-link" href="#"
+              ><i class="bx bx-heart nav__icon"></i
+            ></a>
+          </div>
+          <a class="nav__icon-link" href="#"
+            ><i class="bx bx-shopping-bag nav__icon"></i
+          ></a>
+          <a class="nav__icon-link" href="#"
+            ><i class="bx bx-user nav__icon"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section hero hero--full" id="hero">
+          <div class="hero__container grid">
+            <div class="hero__img-bg hero__img-bg--full">
+              <img
+                src="/assets/img/hero-image.png"
+                alt="hero image"
+                class="hero__img"
+              />
+            </div>
+            <div class="hero__content">
+              <h3 class="hero__subtitle">For The Best</h3>
+              <h1 class="hero__title">Discount Sale</h1>
+              <p class="hero__description">The Big Offer Day Extra 10% Off</p>
+              <div class="hero__timer">
+                <div class="hero__time">01 <span>Days</span></div>
+                <div class="hero__time">05 <span>Hours</span></div>
+                <div class="hero__time">21 <span>Mins</span></div>
+                <div class="hero__time hero__time--primary">
+                  21 <span>Secs</span>
+                </div>
+              </div>
+              <button class="hero__button">Order Now</button>
+            </div>
+          </div>
+        </section>
+        <section class="section collection" id="collection">
+          <div class="section__title">
+            <h2 class="section__description">Top collection 2022</h2>
+            <a class="section__link">View All</a>
+          </div>
+          <div class="collection__content grid">
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/blue-cap-hat.png" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Modern Design Hat</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 25.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/yellow-cap-hat.png" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Winter Saver Design Hat</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 50.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/pink-top.png" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Pink Detailed Blouse</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 35.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/wine-scarf.png" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Wine Scarf</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 35.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/women dresses/b2.jpg" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Pink Detailed Blouse</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 35.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/women dresses/blouse 1.jpg" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Pink Detailed Blouse</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 35.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/women dresses/blouse 3.jpg" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Pink Detailed Blouse</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 35.00</p>
+                </div>
+              </div>
+            </article>
+            <article class="card collection__card">
+              <div class="card__img">
+                <img src="./assets/img/women dresses/images (1).jpg" alt="" />
+              </div>
+              <div class="collection__card-content">
+                <h1 class="collection__card-title">Pink Detailed Blouse</h1>
+                <div class="collection__card-footer">
+                  <div class="collection__card-ratings">
+                    <div class="collection__card-stars">
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bxs-star card-star card-star-fill"></i>
+                      <i class="bx bx-star card-star"></i>
+                    </div>
+                    <div class="collection__card-reviews">(5 reviews)</div>
+                  </div>
+                  <p class="collection__card-price">$ 35.00</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section category" id="category">
+          <div class="category__title">
+            <h2 class="category__text">Category</h2>
+          </div>
+
+          <div class="category__content grid">
+            <article class="category__card">
+              <div class="card__img">
+                <img src="./assets/img/men shirt/930ece2c36f3fd193fb6f2b97d2bb6f5.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <h3>Men</h3>
+                <h4>80 Item</h4>
+              </div>
+            </article>
+            <article class="category__card">
+              <div class="card__img">
+                <img src="./assets/img/red-top.png" alt="" />
+              </div>
+              <div class="card__content">
+                <h3>Women</h3>
+                <h4>70 Item</h4>
+              </div>
+            </article>
+            <article class="category__card">
+              <div class="card__img">
+                <img src="./assets/img/women dresses/34879762ET_14_f.jpeg" alt="" />
+              </div>
+              <div class="card__content">
+                <h3>Kids</h3>
+                <h4>100 Item</h4>
+              </div>
+            </article>
+            <article class="category__card">
+              <div class="card__img">
+                <img src="./assets/img/women dresses/a77715e5820ec1c65c43f20b60202edd.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <h3>Fashion</h3>
+                <h4>200 Item</h4>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section offers" id="offers">
+          <div class="section__title">
+            <h2 class="section__description">Exciting Offers (Winter)</h2>
+            <a class="section__icons">
+              <i class="bx bx-chevron-left section__icon"></i>
+              <i class="bx bx-chevron-right section__icon"></i>
+            </a>
+          </div>
+          <div class="offers__content grid">
+            <article class="offer__card">
+              <div class="card__img">
+                <img src="./assets/img/black-cap-hat.png" alt="" />
+              </div>
+              <div class="card__content">
+                <Hat class="card__title">Wide Cut Round Hat</h1>
+                <div class="card__ratings">
+                  <div class="collection__card-stars">
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bx-star card-star"></i>
+                  </div>
+                  <div class="collection__card-reviews">(5 reviews)</div>
+                </div>
+                <div class="card__pricing">
+                  <div class="card__price">
+                    <p class="card__amount">$ 130.00</p>
+                    <p class="card__discount">$ 175.00</p>
+                  </div>
+                  <button class="card__offer">30% off</button>
+                </div>
+              </div>
+            </article>
+            <article class="offer__card">
+              <div class="card__img">
+                <img src="./assets/img/men shirt/men-shirt-long-sleeve-mens-shirts-casual.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <h1 class="card__title">White and Black Checkered shirt</h1>
+                <div class="card__ratings">
+                  <div class="collection__card-stars">
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bx-star card-star"></i>
+                  </div>
+                  <div class="collection__card-reviews">(5 reviews)</div>
+                </div>
+                <div class="card__pricing">
+                  <div class="card__price">
+                    <p class="card__amount">$ 699.00</p>
+                    <p class="card__discount">$ 899.00</p>
+                  </div>
+                  <button class="card__offer">12% off</button>
+                </div>
+              </div>
+            </article>
+            <article class="offer__card">
+              <div class="card__img">
+                <img src="./assets/img/men shirt/Men-s-Fashion-Print-Shirts-Casual-Button-Down-Mens-Ethnic-Short-Sleeve-Casual-Printing-Hawaiian-Shirt.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <h1 class="card__title">Hawaiin shirt</h1>
+                <div class="card__ratings">
+                  <div class="collection__card-stars">
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bx-star card-star"></i>
+                  </div>
+                  <div class="collection__card-reviews">(5 reviews)</div>
+                </div>
+                <div class="card__pricing">
+                  <div class="card__price">
+                    <p class="card__amount">$ 25.00</p>
+                    <p class="card__discount">$ 35.00</p>
+                  </div>
+                  <button class="card__offer">8% off</button>
+                </div>
+              </div>
+            </article>
+            <article class="offer__card">
+              <div class="card__img">
+                <img src="./assets/img/school-bags.png" alt="" />
+              </div>
+              <div class="card__content">
+                <h1 class="card__title">USB Powered Black Bag</h1>
+                <div class="card__ratings">
+                  <div class="collection__card-stars">
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bx-star card-star"></i>
+                  </div>
+                  <div class="collection__card-reviews">(5 reviews)</div>
+                </div>
+                <div class="card__pricing">
+                  <div class="card__price">
+                    <p class="card__amount">$ 675.00</p>
+                    <p class="card__discount">$ 785.00</p>
+                  </div>
+                  <button class="card__offer">9% off</button>
+                </div>
+              </div>
+            </article>
+            <article class="offer__card">
+              <div class="card__img">
+                <img src="./assets/img/black-shoe.png" alt="" />
+              </div>
+              <div class="card__content">
+                <h1 class="card__title">Universal Black Shoes</h1>
+                <div class="card__ratings">
+                  <div class="collection__card-stars">
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bxs-star card-star card-star-fill"></i>
+                    <i class="bx bx-star card-star"></i>
+                  </div>
+                  <div class="collection__card-reviews">(5 reviews)</div>
+                </div>
+                <div class="card__pricing">
+                  <div class="card__price">
+                    <p class="card__amount">$ 25.00</p>
+                    <p class="card__discount">$ 25.00</p>
+                  </div>
+                  <button class="card__offer">18% off</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="section arrival" id="arrival">
+          <div class="section__title">
+            <h2 class="section__description">New Arrival (Winter)</h2>
+            <a class="section__link">View All</a>
+          </div>
+          <div class="arrival__container grid">
+            <article class="card featured__card">
+              <div class="card__img">
+                <img src="./assets/img/accessories/face cap 3.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <h1 class="card__title">Navy Blue Hat</h1>
+                <p class="card__description">
+                  We Essentials is Focused on creating affordable,
+                   highly-quality, and long lasting <br>
+                   every clothing you can rely on. Our line of men's must-haves
+                   includes polo shirts, chino <br>
+                   pants, classic-fit shorts, casual button-downs, and crew-neck 
+                   teesto our.
+
+                </p>
+                <button class="card__button">Shop Now</button>
+              </div>
+            </article>
+            <div class="arrival__content grid">
+              <article class="card collection__card">
+                <div class="card__img">
+                  <img src="./assets/img/white-t-shirt.png" alt="" />
+                </div>
+                <div class="collection__card-content">
+                  <h1 class="collection__card-title">T-shirt for women</h1>
+                  <div class="collection__card-footer">
+                    <div class="collection__card-ratings">
+                      <div class="collection__card-stars">
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bx-star card-star"></i>
+                      </div>
+                      <div class="collection__card-reviews">(5 reviews)</div>
+                    </div>
+                    <p class="collection__card-price">$ 25.00</p>
+                  </div>
+                </div>
+              </article>
+              <article class="card collection__card">
+                <div class="card__img">
+                  <img src="./assets/img/white-shoe.png" alt="" />
+                </div>
+                <div class="collection__card-content">
+                  <h1 class="collection__card-title">Universal White Shoes</h1>
+                  <div class="collection__card-footer">
+                    <div class="collection__card-ratings">
+                      <div class="collection__card-stars">
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bx-star card-star"></i>
+                      </div>
+                      <div class="collection__card-reviews">(15 reviews)</div>
+                    </div>
+                    <p class="collection__card-price">$ 50.00</p>
+                  </div>
+                </div>
+              </article>
+              <article class="card collection__card">
+                <div class="card__img">
+                  <img src="./assets/img/accessories/face cap1.jpg" alt="" />
+                </div>
+                <div class="collection__card-content">
+                  <h1 class="collection__card-title">Modern Design Hat</h1>
+                  <div class="collection__card-footer">
+                    <div class="collection__card-ratings">
+                      <div class="collection__card-stars">
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bx-star card-star"></i>
+                      </div>
+                      <div class="collection__card-reviews">(5 reviews)</div>
+                    </div>
+                    <p class="collection__card-price">$ 25.00</p>
+                  </div>
+                </div>
+              </article>
+              <article class="card collection__card">
+                <div class="card__img">
+                  <img src="./assets/img/accessories/face cap 2.jpg" alt="" />
+                </div>
+                <div class="collection__card-content">
+                  <h1 class="collection__card-title">Modern Design Hat</h1>
+                  <div class="collection__card-footer">
+                    <div class="collection__card-ratings">
+                      <div class="collection__card-stars">
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bxs-star card-star card-star-fill"></i>
+                        <i class="bx bx-star card-star"></i>
+                      </div>
+                      <div class="collection__card-reviews">(5 reviews)</div>
+                    </div>
+                    <p class="collection__card-price">$ 25.00</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="section blog" id="blog">
+          <div class="section__title">
+            <h2 class="section__description">From Our Blog</h2>
+          </div>
+          <img class="blog-img" src="/assets/img/woman-with-cardigan-2.png" alt="woman-with-cardigan"2>
+          <div class="blog__content grid">
+            <article class="blog__card">
+              <img src="" alt="" class="me" />
+              <div class="blog__card-content">
+                <h2>By Nick Jones - 28-09-22</h2>
+                <p>perfect to shop in Summertime</p>
+                <a class="card__link" href="#"
+                  >Read more <i class="bx bx-right-arrow-alt"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>
